@@ -2,13 +2,13 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2017",
-  "date": "2019-07-14T20:46:55.919Z",
+  "date": "2019-07-14T21:51:04.260Z",
   "describe": "",
   "description": "Determine whether the passed value is a safe integer.",
   "file": "is-safe-integer-x.js",
-  "hash": "05bcd09ffbd57254db9a",
+  "hash": "86556f65bfbb83515e33",
   "license": "MIT",
-  "version": "2.0.0"
+  "version": "2.0.1"
 }
 */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -398,7 +398,6 @@ function attempt(fn) {
     };
   }
 }
-;
 
 
 // CONCATENATED MODULE: ./node_modules/has-symbol-support-x/dist/has-symbol-support-x.esm.js
