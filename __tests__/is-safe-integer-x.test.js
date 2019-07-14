@@ -1,54 +1,38 @@
-let isSafeInteger;
-
-if (typeof module === 'object' && module.exports) {
-  require('es5-shim');
-  require('es5-shim/es5-sham');
-
-  if (typeof JSON === 'undefined') {
-    JSON = {};
-  }
-
-  require('json3').runInContext(null, JSON);
-  require('es6-shim');
-  const es7 = require('es7-shim');
-  Object.keys(es7).forEach(function(key) {
-    const obj = es7[key];
-
-    if (typeof obj.shim === 'function') {
-      obj.shim();
-    }
-  });
-  isSafeInteger = require('../../index.js');
-} else {
-  isSafeInteger = returnExports;
-}
+import isSafeInteger from '../src/is-safe-integer-x';
 
 describe('isSafeInteger', function() {
   it('is a function', function() {
+    expect.assertions(1);
     expect(typeof isSafeInteger).toBe('function');
   });
 
   it('should return true', function() {
-    isSafeInteger(0);
-    isSafeInteger(-0);
-    isSafeInteger(1);
-    isSafeInteger(-100000);
-    isSafeInteger(Number.MAX_SAFE_INTEGER);
-    isSafeInteger(Number.MIN_SAFE_INTEGER);
+    expect.assertions(6);
+    expect(isSafeInteger(0)).toBe(true);
+    expect(isSafeInteger(-0)).toBe(true);
+    expect(isSafeInteger(1)).toBe(true);
+    expect(isSafeInteger(-100000)).toBe(true);
+    /* eslint-disable-next-line compat/compat */
+    expect(isSafeInteger(Number.MAX_SAFE_INTEGER)).toBe(true);
+    /* eslint-disable-next-line compat/compat */
+    expect(isSafeInteger(Number.MIN_SAFE_INTEGER)).toBe(true);
   });
 
   it('should return false', function() {
-    isSafeInteger(Number.MAX_SAFE_INTEGER + 1);
-    isSafeInteger(Number.MIN_SAFE_INTEGER - 1);
-    isSafeInteger(0.1);
-    isSafeInteger(-0.1);
-    isSafeInteger(Math.PI);
-    isSafeInteger(NaN);
-    isSafeInteger(Infinity);
-    isSafeInteger(-Infinity);
-    isSafeInteger('10');
-    isSafeInteger(true);
-    isSafeInteger(false);
-    isSafeInteger([1]);
+    expect.assertions(12);
+    /* eslint-disable-next-line compat/compat */
+    expect(isSafeInteger(Number.MAX_SAFE_INTEGER + 1)).toBe(false);
+    /* eslint-disable-next-line compat/compat */
+    expect(isSafeInteger(Number.MIN_SAFE_INTEGER - 1)).toBe(false);
+    expect(isSafeInteger(0.1)).toBe(false);
+    expect(isSafeInteger(-0.1)).toBe(false);
+    expect(isSafeInteger(Math.PI)).toBe(false);
+    expect(isSafeInteger(NaN)).toBe(false);
+    expect(isSafeInteger(Infinity)).toBe(false);
+    expect(isSafeInteger(-Infinity)).toBe(false);
+    expect(isSafeInteger('10')).toBe(false);
+    expect(isSafeInteger(true)).toBe(false);
+    expect(isSafeInteger(false)).toBe(false);
+    expect(isSafeInteger([1])).toBe(false);
   });
 });

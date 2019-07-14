@@ -1,8 +1,6 @@
 import isInteger from 'is-integer-x';
 import MAX_SAFE_INTEGER from 'max-safe-integer';
-
-const MIN_SAFE_INTEGER = -MAX_SAFE_INTEGER;
-
+var MIN_SAFE_INTEGER = -MAX_SAFE_INTEGER;
 /**
  * This method determines whether the passed value is a safe integer.
  *
@@ -14,6 +12,9 @@ const MIN_SAFE_INTEGER = -MAX_SAFE_INTEGER;
  * @returns {boolean} A Boolean indicating whether or not the given value is a
  *  safe integer.
  */
+
 export default function isSafeInteger(value) {
   return isInteger(value) && value >= MIN_SAFE_INTEGER && value <= MAX_SAFE_INTEGER;
 }
+
+//# sourceMappingURL=is-safe-integer-x.esm.js.map

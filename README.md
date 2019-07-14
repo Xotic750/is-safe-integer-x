@@ -21,15 +21,13 @@
 <a name="module_is-safe-integer-x"></a>
 
 ## is-safe-integer-x
+
 Determine whether the passed value is a safe integer.
 
-**Version**: 1.2.0  
-**Author**: Xotic750 <Xotic750@gmail.com>  
-**License**: [MIT](&lt;https://opensource.org/licenses/MIT&gt;)  
-**Copyright**: Xotic750  
 <a name="exp_module_is-safe-integer-x--module.exports"></a>
 
 ### `module.exports(value)` ⇒ <code>boolean</code> ⏏
+
 This method determines whether the passed value is a safe integer.
 
 Can be exactly represented as an IEEE-754 double precision number, and
@@ -38,29 +36,30 @@ integer to fit the IEEE-754 representation.
 
 **Kind**: Exported function  
 **Returns**: <code>boolean</code> - A Boolean indicating whether or not the given value is a
- safe integer.  
+safe integer.
 
-| Param | Type | Description |
-| --- | --- | --- |
+| Param | Type            | Description                                      |
+| ----- | --------------- | ------------------------------------------------ |
 | value | <code>\*</code> | The value to be tested for being a safe integer. |
 
-**Example**  
+**Example**
+
 ```js
-var isSafeInteger = require('is-safe-integer-x');
+import isSafeInteger from 'is-safe-integer-x';
 
-isSafeInteger(0);                    // true
-isSafeInteger(1);                    // true
-isSafeInteger(-100000);              // true
+console.log(isSafeInteger(0)); // true
+console.log(isSafeInteger(1)); // true
+console.log(isSafeInteger(-100000)); // true
 
-isSafeInteger(Math.pow(2, 53));      // false
-isSafeInteger(0.1);                  // false
-isSafeInteger(Math.PI);              // false
+console.log(isSafeInteger(Math.pow(2, 53))); // false
+console.log(isSafeInteger(0.1)); // false
+console.log(isSafeInteger(Math.PI)); // false
 
-isSafeInteger(NaN);                  // false
-isSafeInteger(Infinity);             // false
-isSafeInteger(-Infinity);            // false
-isSafeInteger('10');                 // false
-isSafeInteger(true);                 // false
-isSafeInteger(false);                // false
-isSafeInteger([1]);                  // false
+console.log(isSafeInteger(NaN)); // false
+console.log(isSafeInteger(Infinity)); // false
+console.log(isSafeInteger(-Infinity)); // false
+console.log(isSafeInteger('10')); // false
+console.log(isSafeInteger(true)); // false
+console.log(isSafeInteger(false)); // false
+console.log(isSafeInteger([1])); // false
 ```
