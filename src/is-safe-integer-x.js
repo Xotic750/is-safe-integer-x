@@ -7,11 +7,10 @@
  * @module is-safe-integer-x
  */
 
-'use strict';
+const isInteger = require('is-integer-x');
+const MAX_SAFE_INTEGER = require('max-safe-integer');
 
-var isInteger = require('is-integer-x');
-var MAX_SAFE_INTEGER = require('max-safe-integer');
-var MIN_SAFE_INTEGER = -MAX_SAFE_INTEGER;
+const MIN_SAFE_INTEGER = -MAX_SAFE_INTEGER;
 
 /**
  * This method determines whether the passed value is a safe integer.
