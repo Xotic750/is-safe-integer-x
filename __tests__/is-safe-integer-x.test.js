@@ -12,17 +12,17 @@ describe('isSafeInteger', function() {
     expect(isSafeInteger(-0)).toBe(true);
     expect(isSafeInteger(1)).toBe(true);
     expect(isSafeInteger(-100000)).toBe(true);
-    /* eslint-disable-next-line compat/compat */
+
     expect(isSafeInteger(Number.MAX_SAFE_INTEGER)).toBe(true);
-    /* eslint-disable-next-line compat/compat */
+
     expect(isSafeInteger(Number.MIN_SAFE_INTEGER)).toBe(true);
   });
 
   it('should return false', function() {
     expect.assertions(12);
-    /* eslint-disable-next-line compat/compat */
+
     expect(isSafeInteger(Number.MAX_SAFE_INTEGER + 1)).toBe(false);
-    /* eslint-disable-next-line compat/compat */
+
     expect(isSafeInteger(Number.MIN_SAFE_INTEGER - 1)).toBe(false);
     expect(isSafeInteger(0.1)).toBe(false);
     expect(isSafeInteger(-0.1)).toBe(false);
