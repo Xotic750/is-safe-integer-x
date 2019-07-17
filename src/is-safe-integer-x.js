@@ -14,6 +14,8 @@ const MIN_SAFE_INTEGER = -MAX_SAFE_INTEGER;
  * @returns {boolean} A Boolean indicating whether or not the given value is a
  *  safe integer.
  */
-export default function isSafeInteger(value) {
+const isSafeInteger = function isSafeInteger(value) {
   return isInteger(value) && value >= MIN_SAFE_INTEGER && value <= MAX_SAFE_INTEGER;
-}
+};
+
+export default isSafeInteger;

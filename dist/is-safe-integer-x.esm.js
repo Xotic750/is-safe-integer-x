@@ -13,8 +13,10 @@ var MIN_SAFE_INTEGER = -MAX_SAFE_INTEGER;
  *  safe integer.
  */
 
-export default function isSafeInteger(value) {
+var isSafeInteger = function isSafeInteger(value) {
   return isInteger(value) && value >= MIN_SAFE_INTEGER && value <= MAX_SAFE_INTEGER;
-}
+};
+
+export default isSafeInteger;
 
 //# sourceMappingURL=is-safe-integer-x.esm.js.map
