@@ -1,5 +1,5 @@
 import isInteger from 'is-integer-x';
-import MAX_SAFE_INTEGER from 'max-safe-integer';
+var MAX_SAFE_INTEGER = 9007199254740991;
 var MIN_SAFE_INTEGER = -MAX_SAFE_INTEGER;
 /**
  * This method determines whether the passed value is a safe integer.

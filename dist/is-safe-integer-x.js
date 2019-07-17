@@ -2,13 +2,13 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2017",
-  "date": "2019-07-17T16:51:35.097Z",
+  "date": "2019-07-17T17:29:16.074Z",
   "describe": "",
   "description": "Determine whether the passed value is a safe integer.",
   "file": "is-safe-integer-x.js",
-  "hash": "ccd5951634c644f083ea",
+  "hash": "9240356065fc50816fc1",
   "license": "MIT",
-  "version": "2.0.8"
+  "version": "2.0.9"
 }
 */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -120,7 +120,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 7);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -131,7 +131,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 var toStr = Object.prototype.toString;
-var hasSymbols = __webpack_require__(4)();
+var hasSymbols = __webpack_require__(3)();
 
 if (hasSymbols) {
 	var symToStr = Symbol.prototype.toString;
@@ -193,15 +193,6 @@ module.exports = function isPrimitive(val) {
 
 "use strict";
 
-module.exports = 9007199254740991;
-
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
 
 var getDay = Date.prototype.getDay;
 var tryDateObject = function tryDateObject(value) {
@@ -224,14 +215,14 @@ module.exports = function isDateObject(value) {
 
 
 /***/ }),
-/* 4 */
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(global) {
 
 var origSymbol = global.Symbol;
-var hasSymbolSham = __webpack_require__(6);
+var hasSymbolSham = __webpack_require__(5);
 
 module.exports = function hasNativeSymbols() {
 	if (typeof origSymbol !== 'function') { return false; }
@@ -242,10 +233,10 @@ module.exports = function hasNativeSymbols() {
 	return hasSymbolSham();
 };
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(5)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(4)))
 
 /***/ }),
-/* 5 */
+/* 4 */
 /***/ (function(module, exports) {
 
 var g;
@@ -271,7 +262,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 6 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -320,7 +311,7 @@ module.exports = function hasSymbols() {
 
 
 /***/ }),
-/* 7 */
+/* 6 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -434,7 +425,7 @@ var is_primitive = __webpack_require__(1);
 var is_primitive_default = /*#__PURE__*/__webpack_require__.n(is_primitive);
 
 // EXTERNAL MODULE: ./node_modules/is-date-object/index.js
-var is_date_object = __webpack_require__(3);
+var is_date_object = __webpack_require__(2);
 var is_date_object_default = /*#__PURE__*/__webpack_require__.n(is_date_object);
 
 // CONCATENATED MODULE: ./node_modules/to-boolean-x/dist/to-boolean-x.esm.js
@@ -1606,14 +1597,10 @@ var is_integer_x_esm_isInteger = function isInteger(value) {
 /* harmony default export */ var is_integer_x_esm = (is_integer_x_esm_isInteger);
 
 
-// EXTERNAL MODULE: ./node_modules/max-safe-integer/index.js
-var max_safe_integer = __webpack_require__(2);
-var max_safe_integer_default = /*#__PURE__*/__webpack_require__.n(max_safe_integer);
-
 // CONCATENATED MODULE: ./dist/is-safe-integer-x.esm.js
 
-
-var MIN_SAFE_INTEGER = -max_safe_integer_default.a;
+var MAX_SAFE_INTEGER = 9007199254740991;
+var MIN_SAFE_INTEGER = -MAX_SAFE_INTEGER;
 /**
  * This method determines whether the passed value is a safe integer.
  *
@@ -1627,7 +1614,7 @@ var MIN_SAFE_INTEGER = -max_safe_integer_default.a;
  */
 
 var is_safe_integer_x_esm_isSafeInteger = function isSafeInteger(value) {
-  return is_integer_x_esm(value) && value >= MIN_SAFE_INTEGER && value <= max_safe_integer_default.a;
+  return is_integer_x_esm(value) && value >= MIN_SAFE_INTEGER && value <= MAX_SAFE_INTEGER;
 };
 
 /* harmony default export */ var is_safe_integer_x_esm = __webpack_exports__["default"] = (is_safe_integer_x_esm_isSafeInteger);

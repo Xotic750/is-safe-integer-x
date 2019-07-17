@@ -1,6 +1,6 @@
 import isInteger from 'is-integer-x';
-import MAX_SAFE_INTEGER from 'max-safe-integer';
 
+const MAX_SAFE_INTEGER = 9007199254740991;
 const MIN_SAFE_INTEGER = -MAX_SAFE_INTEGER;
 
 /**
