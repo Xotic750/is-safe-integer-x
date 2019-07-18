@@ -2,13 +2,13 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2017",
-  "date": "2019-07-18T16:16:30.926Z",
+  "date": "2019-07-18T18:35:43.538Z",
   "describe": "",
   "description": "Determine whether the passed value is a safe integer.",
   "file": "is-safe-integer-x.js",
   "hash": "9240356065fc50816fc1",
   "license": "MIT",
-  "version": "2.0.12"
+  "version": "2.0.13"
 }
 */
 (function webpackUniversalModuleDefinition(root, factory) {
