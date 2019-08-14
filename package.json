@@ -1,6 +1,6 @@
 {
   "name": "is-safe-integer-x",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Determine whether the passed value is a safe integer.",
   "homepage": "https://github.com/Xotic750/is-safe-integer-x",
   "author": {
@@ -51,7 +51,7 @@
     "url": "https://github.com/Xotic750/is-safe-integer-x/issues"
   },
   "dependencies": {
-    "is-integer-x": "^2.1.0"
+    "is-integer-x": "^2.2.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
